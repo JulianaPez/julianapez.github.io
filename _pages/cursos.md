@@ -12,4 +12,4 @@ información, materiales y recursos de las asignaturas.
 
 ## Calificaciones
 
-[Consultar mis notas](/notas/)
+[Biología Animal](/notas_an/)

@@ -1,5 +1,5 @@
 ---
-permalink: /notas/
+permalink: /notas_an/
 title: "Consulta de notas"
 
 author_profile: false
