@@ -10,6 +10,8 @@ author_profile: false
 
   <h2>Consulta de calificaciones</h2>
 
+  <p></p>
+
   <div class="consulta-formulario">
 
 
