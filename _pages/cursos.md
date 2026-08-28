@@ -1,5 +1,7 @@
-title: "Cursos"
+---
 permalink: /cursos/
+title: "Cursos"
+
 author_profile: true
 ---
 
