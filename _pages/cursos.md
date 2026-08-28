@@ -5,11 +5,10 @@ title: "Cursos"
 author_profile: true
 ---
 
-# Cursos
 
-Bienvenidos a la sección de cursos.
+Sección de cursos.
 
-Aquí encontrarás información, materiales y recursos de las asignaturas.
+información, materiales y recursos de las asignaturas.
 
 ## Calificaciones
 
