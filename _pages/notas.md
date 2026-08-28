@@ -2,12 +2,10 @@
 permalink: /notas/
 title: "Consulta de notas"
 
-layout: single
 author_profile: false
-sidebar:
-nav: false
-classes: wide
 ---
+
+
 <div class="notas-container">
 
   <h2>Consulta de calificaciones</h2>
