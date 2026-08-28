@@ -10,8 +10,6 @@ author_profile: false
 
   <h2>Consulta de calificaciones</h2>
 
-  <p>Ingresa tu número de documento para consultar tus calificaciones.</p>
-
   <div class="consulta-formulario">
 
 
