@@ -1,3 +1,9 @@
+---
+title: "Consulta de notas"
+permalink: /notas/
+author_profile: false
+---
+
 <div class="notas-container">
 
 <h2>Consulta de calificaciones</h2>
