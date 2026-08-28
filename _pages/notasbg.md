@@ -1,18 +1,15 @@
 ---
-title: "Notas - Biología General"
 permalink: /notasbg/
-layout: single
+title: "Notas Biología General"
+
 author_profile: false
-sidebar:
-  nav: false
-classes: wide
 ---
 
 <div class="notas-container">
 
-  <h2>Consulta de calificaciones</h2>
+  <h2></h2>
 
-  <p>Ingresa tu número de documento para consultar tus calificaciones de Biología General.</p>
+  <p></p>
 
   <div class="consulta-formulario">
 
@@ -85,6 +82,7 @@ classes: wide
 
 const API_URL = "https://script.google.com/macros/s/AKfycbyH7H2ifavNaFy11uahrV3hbCTKUAS2U1ek6dQnEcR_tnm9jcyTxis1pQPSV9hfXTUy0g/exec";
 
+
 async function consultarNotas() {
 
   const documento = document
@@ -93,6 +91,7 @@ async function consultarNotas() {
     .trim();
 
   const resultado = document.getElementById("resultado");
+
 
   if (!documento) {
 
@@ -105,7 +104,9 @@ async function consultarNotas() {
     return;
   }
 
+
   resultado.innerHTML = "<p>Consultando calificaciones...</p>";
+
 
   try {
 
@@ -117,6 +118,7 @@ async function consultarNotas() {
 
     const datos = await respuesta.json();
 
+
     if (!datos.success) {
 
       resultado.innerHTML = `
@@ -127,6 +129,7 @@ async function consultarNotas() {
 
       return;
     }
+
 
     let filas = "";
 
@@ -140,6 +143,7 @@ async function consultarNotas() {
       `;
 
     }
+
 
     resultado.innerHTML = `
 
@@ -167,6 +171,7 @@ async function consultarNotas() {
   }
 
 }
+
 
 document
   .getElementById("documento")
