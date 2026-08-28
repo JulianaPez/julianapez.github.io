@@ -14,7 +14,7 @@ author_profile: false
 
   <div class="consulta-formulario">
 
-```
+
 <input
   type="text"
   id="documento"
@@ -25,7 +25,7 @@ author_profile: false
 <button onclick="consultarNotas()">
   Consultar
 </button>
-```
+
 
   </div>
 
