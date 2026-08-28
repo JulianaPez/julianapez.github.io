@@ -1,31 +1,31 @@
 ---
-permalink: /notas_an/
-title: "Consulta de notas"
-
+title: "Notas - Biología General"
+permalink: /notasbg/
+layout: single
 author_profile: false
+sidebar:
+  nav: false
+classes: wide
 ---
-
 
 <div class="notas-container">
 
-  <h2></h2>
+  <h2>Consulta de calificaciones</h2>
 
-  <p></p>
+  <p>Ingresa tu número de documento para consultar tus calificaciones de Biología General.</p>
 
   <div class="consulta-formulario">
 
+    <input
+      type="text"
+      id="documento"
+      placeholder="Número de documento"
+      autocomplete="off"
+    >
 
-<input
-  type="text"
-  id="documento"
-  placeholder="Número de documento"
-  autocomplete="off"
->
-
-<button onclick="consultarNotas()">
-  Consultar
-</button>
-
+    <button onclick="consultarNotas()">
+      Consultar
+    </button>
 
   </div>
 
@@ -85,7 +85,6 @@ author_profile: false
 
 const API_URL = "https://script.google.com/macros/s/AKfycbyH7H2ifavNaFy11uahrV3hbCTKUAS2U1ek6dQnEcR_tnm9jcyTxis1pQPSV9hfXTUy0g/exec";
 
-
 async function consultarNotas() {
 
   const documento = document
@@ -94,9 +93,6 @@ async function consultarNotas() {
     .trim();
 
   const resultado = document.getElementById("resultado");
-
-
-  // Verificar que se ingresó un documento
 
   if (!documento) {
 
@@ -109,22 +105,17 @@ async function consultarNotas() {
     return;
   }
 
-
-  // Mensaje mientras consulta
-
   resultado.innerHTML = "<p>Consultando calificaciones...</p>";
-
 
   try {
 
     const respuesta = await fetch(
-      API_URL + "?doc=" + encodeURIComponent(documento)
+      API_URL +
+      "?doc=" + encodeURIComponent(documento) +
+      "&sheet=Hoja%202"
     );
 
     const datos = await respuesta.json();
-
-
-    // Si el documento no existe
 
     if (!datos.success) {
 
@@ -136,9 +127,6 @@ async function consultarNotas() {
 
       return;
     }
-
-
-    // Crear automáticamente las filas de la tabla
 
     let filas = "";
 
@@ -152,9 +140,6 @@ async function consultarNotas() {
       `;
 
     }
-
-
-    // Mostrar resultados
 
     resultado.innerHTML = `
 
@@ -183,17 +168,12 @@ async function consultarNotas() {
 
 }
 
-
-// Permitir consultar presionando ENTER
-
 document
   .getElementById("documento")
   .addEventListener("keypress", function(event) {
 
     if (event.key === "Enter") {
-
       consultarNotas();
-
     }
 
   });
