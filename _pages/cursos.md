@@ -6,10 +6,10 @@ author_profile: false
 ---
 
 
-Sección de cursos.
+Sección de cursos:
+## Biología General
+[Notas](/notasbg/)
 
-información, materiales y recursos de las asignaturas.
 
-## Calificaciones
-
-[Biología Animal](/notas_an/)
+## Biología Animal 
+[Notas](/notasan/)
