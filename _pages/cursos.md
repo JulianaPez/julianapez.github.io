@@ -2,7 +2,7 @@
 permalink: /cursos/
 title: "Cursos"
 
-author_profile: true
+author_profile: false
 ---
 
 

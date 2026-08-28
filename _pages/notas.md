@@ -1,4 +1,5 @@
 ---
+
 title: "Consulta de notas"
 permalink: /notas/
 layout: single
@@ -6,7 +7,7 @@ author_profile: false
 sidebar:
 nav: false
 classes: wide
----
+-------------
 
 <div class="notas-container">
 
@@ -140,7 +141,23 @@ async function consultarNotas() {
     }
 
 
-    // Mostrar las notas
+    // Crear automáticamente las filas de la tabla
+
+    let filas = "";
+
+    for (const [nombre, nota] of Object.entries(datos.notas)) {
+
+      filas += `
+        <tr>
+          <th>${nombre}</th>
+          <td>${nota}</td>
+        </tr>
+      `;
+
+    }
+
+
+    // Mostrar resultados
 
     resultado.innerHTML = `
 
@@ -148,25 +165,7 @@ async function consultarNotas() {
 
       <table class="tabla-notas">
 
-        <tr>
-          <th>Curso</th>
-          <td>${datos.curso}</td>
-        </tr>
-
-        <tr>
-          <th>Examen</th>
-          <td>${datos.examen}</td>
-        </tr>
-
-        <tr>
-          <th>Laboratorio</th>
-          <td>${datos.lab}</td>
-        </tr>
-
-        <tr>
-          <th>Definitiva</th>
-          <td><strong>${datos.definitiva}</strong></td>
-        </tr>
+        ${filas}
 
       </table>
 
