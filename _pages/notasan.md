@@ -1,6 +1,6 @@
 ---
-permalink: /notas_an/
-title: "Consulta de notas"
+permalink: /notasan/
+title: "Notas Biología Animal II"
 
 author_profile: false
 ---
